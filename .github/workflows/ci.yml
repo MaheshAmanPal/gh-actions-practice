@@ -26,10 +26,7 @@ jobs:
       - name: Run tests
         run: node app/index.test.js
 
-      - name: Intentional failure on Windows + Node 18 (to prove isolation)
-        if: matrix.os == 'windows-latest' && matrix.node-version == 18
-        run: exit 1
-        shell: bash
+      
 
   deploy:
     needs: test

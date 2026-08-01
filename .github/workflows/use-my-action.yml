@@ -1,0 +1,17 @@
+name: Use My Custom Action
+
+on:
+  workflow_dispatch:
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: MaheshAmanPal/my-greeting-action@v1.0.0
+        id: greet
+        with:
+          greeting-name: "DevOps Learner"
+          repeat-count: "3"
+
+      - name: Show the output
+        run: echo "Output was ${{ steps.greet.outputs.message }}"

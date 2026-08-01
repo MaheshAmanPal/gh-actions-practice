@@ -1,0 +1,3 @@
+function add(a, b) { return a + b; }
+module.exports = add;
+console.log("App running on Node", process.version);
